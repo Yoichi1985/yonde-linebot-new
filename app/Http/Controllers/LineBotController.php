@@ -41,11 +41,11 @@ class LineBotController extends Controller
 
             $replyToken = $event->getReplyToken();
             $replyText = $event->getText();
-            $replyImage = $event->getImage();
+            // $replyImage = $event->getImage();
 
 
             if (is_numeric($replyText)) {
-                $lineBot->replyImage("https://3.bp.blogspot.com/-vQSPQf-ytsc/T3K7QM3qaQI/AAAAAAAAE-s/6SB2q7ltxwg/s1600/omikuji_daikichi.png");
+                // $lineBot->replyImage("https://3.bp.blogspot.com/-vQSPQf-ytsc/T3K7QM3qaQI/AAAAAAAAE-s/6SB2q7ltxwg/s1600/omikuji_daikichi.png");
                 $lineBot->replyText($replyToken, 'おめでとうございます！500ポイントGET(^^♪ポイントはLINE Payにチャージ、又はラインスタンプに交換ができます。');
             } else {
                 $lineBot->replyText($replyToken, 'パスワードが間違っています。再度確認の上送信してください。');
